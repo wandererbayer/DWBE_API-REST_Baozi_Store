@@ -5,11 +5,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-// O @Entity avisa que essa classe vai virar uma tabela no banco
+// O @Entity avisa que essa classe vira uma tabela
 @Entity
 public class Cliente {
 
-    // Chave primaria, o banco gera o numero sozinho
+    // Chave primaria
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,7 +19,7 @@ public class Cliente {
     private String telefone;
     private String cidade;
 
-    // Getters e setters, o Spring usa eles pra montar o JSON
+    // Getters e setters
     public Long getId() {
         return id;
     }
